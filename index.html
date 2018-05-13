@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
         <title>Tunji GitHub io</title>
         <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Tammudu|Erica+One|PT+Sans|Stalinist+One" rel="stylesheet">
@@ -47,23 +47,43 @@
             }
             a:hover {
                     color: orangered;
+                    text-decoration: none;
             }
-            .jumbotron {background-color: navy;}
+            .jumbotron {
+                background-color: navy;
+            }
+            .redBox {
+                background-color: orange; 
+                height: 300px; 
+                width: 30%;
+                box-sizing: border-box;
+                margin: 10px;
+            }
             /*
                 font-family: 'Baloo Tammudu', cursive;
                 font-family: 'Stalinist One', cursive;
                 font-family: 'Erica One', cursive;
                 font-family: 'PT Sans', sans-serif;
+                display: inline-block;
+                 margin: 0 5px; 
             */
         </style>
     </head>
-    <body>
+    <body><!--
         <div class="jumbotron jumbotron-fluid">
             <p id="one"><a href="#">Tunji Akanbi</a></p>
             <p id="two"><a href="#">Tunji Akanbi</a></p>
             <p id="three"><a href="#">Tunji Akanbi</a></p>
             <p id="four"><a href="#">Tunji Akanbi</a></p>
             <p id="five"><a href="#">Tunji Akanbi</a></p>
+        </div>-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 redBox"></div>
+                <div class="col-md-3 redBox"></div>
+                <div class="col-md-3 redBox"></div>
+                <div class="col-md-3 redBox"></div>
+            </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
