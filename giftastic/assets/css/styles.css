@@ -1,0 +1,49 @@
+
+#topicLabel {
+    font-family: 'Anton', sans-serif;
+    font-size: 3em;
+    margin: 0.3em;
+}
+
+body { 
+    font-family: 'Julius Sans One', sans-serif;
+    /* background-image: url("assets/images/texturez.png"); */
+}
+
+.topic_Button {
+    margin: 5px;
+}
+
+#main {
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 640px; */
+    width: 100%;
+}
+
+h2 {
+    margin-bottom: 1.5em;
+}
+
+#imageSection {
+    border-top: 0.05em solid #000;
+}
+
+.topicImgHolder {
+    max-width: 200px;
+    height: auto;
+    /* width: 100%; */
+    margin-top: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-block;
+    
+}
+.topicImgHolder>img {
+    margin: 20px;
+}
+
+#imgContainer {
+    background-color: rgba(220,220,220, 0.1);
+}
