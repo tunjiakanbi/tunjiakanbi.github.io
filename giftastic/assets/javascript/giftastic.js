@@ -9,13 +9,7 @@ $("document").ready(function () {
             topicButton.attr("data-topic", topicsArray[t]);
             topicButton.addClass("btn btn-info topic_Button");
             topicButton.text(topicsArray[t]);
-
-            // topicButton.attr("class", "btn btn-info");
-            // topicButton.attr("class", "topic_Button");
-
             $("#topics-appear-here").append(topicButton);
-
-            // topicButton.attr("class", "topic_Button");
         }
     }
 
@@ -42,9 +36,6 @@ $("document").ready(function () {
             $("#imageSection").empty();
             for (var i = 0; i < results.length; i++) {
                 var topicDiv = $('<div class="topicImgHolder">');
-                // topicDiv.attr("class", "topicImg");
-                // topicDiv.addClass("topicImg");
-                // topicDiv.addClass("topicImgHolder");
                 var rating = $("<h2>").html("Ratings: " + results[i].rating);
                 topicDiv.append(rating);
                 var topicImage = $("<img>");
@@ -64,62 +55,16 @@ $("document").ready(function () {
         console.log(this);
         var state = $(this).attr("data-state");
         if (state === "still") {
-                $(this).attr('src', $(this).attr('data-animate'));
-                $(this).attr('data-state', 'animate');
-            } else {
-                $(this).attr('src', $(this).attr('data-still'));
-                $(this).attr('data-state', 'still');
-            }
-
-        // var state = $(this).find("img").attr("data-state");
-        // if (state === "still") {
-        //     $(this).find("img").attr("src", $(this).find("img").attr("data-animate"));
-        //     $(this).find("img").attr("data-state", "animate");
-        // } else {
-        //     $(this).find("img").attr("src", $(this).find("img").attr("data-still"));
-        //     $(this).find("img").attr("data-state", "still");
-        // }
+            $(this).attr('src', $(this).attr('data-animate'));
+            $(this).attr('data-state', 'animate');
+        } else {
+            $(this).attr('src', $(this).attr('data-still'));
+            $(this).attr('data-state', 'still');
+        }
     }
 
-    // $(document).ready(function () {
-       
-        topicButtons();
-    // });
+    topicButtons();
 
     $(document).on("click", ".topic_Button", getTopicImages);
-    // $(document).on("click", ".topicImgHolder", animateTopic);
-    // $(".topicImgHolder").click(function(e){
-    //     console.log(e);
-    // });
     $(document).on("click", ".topic_Image", animateTopic);
-
-
-
-
-
-
-    // $("button").on("click", function () {
-    //     var topic = $(this).attr("data-topic", topics[1]);
-    //     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
-    //         topic + "&api_key=dc6zaTOxFJmzC&limit=10";
-
-    //     $.ajax({
-    //         url: queryURL,
-    //         method: "GET"
-    //     }).then(function (response) {
-    //         console.log(response);
-    //         var results = response.data;
-    //         for (var i = 0; i < results.length; i++) {
-
-    //             var topicDiv = $("<div>");
-    //             var p = $("<p>").text(text);
-    //             var text = results[i].rating;
-    //             var topicImage = $("<img>");
-    //             topicImage.attr("src", results[i].images.fixed_height.url);
-    //             topicDiv.prepend(p);
-    //             topicDiv.append(topicImage);
-    //             $("#topics-appear-here").prepend(topicDiv);
-    //         }
-    //     });
-    // });
 });

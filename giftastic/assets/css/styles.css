@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Julius Sans One', sans-serif;
-    /* background-image: url("assets/images/texturez.png"); */
 }
 
 .topic_Button {
@@ -14,10 +13,8 @@ body {
 }
 
 #main {
-    /* margin-top: 20px; */
     margin-left: auto;
     margin-right: auto;
-    /* width: 640px; */
     width: 100%;
     background-color: lightgray;
     padding: 1em;
@@ -27,25 +24,14 @@ h2 {
     margin-bottom: 0.5em;
 }
 
-/* #imageSection {
-    border-top: 0.05em solid #000;
-} */
-
 .topicImgHolder {
-    /* max-width: 200px;
-    height: auto; */
     max-height: 200px;
     width: auto;
-    /* width: 100%; */
     margin-top: 2em;
     margin-right: auto;
     margin-left: auto;
     display: inline-block;
 }
-
-/* .topicImgHolder>img {
-        margin: 10px;
-    } */
 
 .topic_Image {
     margin-right: 20px;
@@ -83,13 +69,11 @@ footer {
     left: 0;
     position: absolute;
     width: 100%;
-  /* margin-top: 50px; */
- 
     background-color: #666;
-    text-align: center; 
+    text-align: center;
     color: #fff;
     font-family: 'Arial', "Helvetica Neue", Helvetica, sans-serif;
-    padding: 1.25em;  
-    border-top:  5px solid #4aaaa5; 
-    width: 100%; 
+    padding: 1.25em;
+    border-top: 5px solid #4aaaa5;
+    width: 100%;
 }
