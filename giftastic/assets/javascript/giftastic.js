@@ -52,6 +52,7 @@ $("document").ready(function () {
                 topicImage.attr("data-still", results[i].images.fixed_height_still.url);
                 topicImage.attr("data-animate", results[i].images.fixed_height.url);
                 topicImage.attr("data-state", "still");
+                topicImage.addClass("topic_Image");
                 topicDiv.append(topicImage);
                 $("#imageSection").append(topicDiv);
             }
@@ -59,25 +60,25 @@ $("document").ready(function () {
     }
 
     function animateTopic() {
-        // console.log('animate topic');
-        // console.log(this);
-        // var state = $(this).attr("data-state");
-        // if (state === "still") {
-        //         $(this).attr('src', $(this).attr('data-animate'));
-        //         $(this).attr('data-state', 'animate');
-        //     } else {
-        //         $(this).attr('src', $(this).attr('data-still'));
-        //         $(this).attr('data-state', 'still');
-        //     }
-
-        var state = $(this).find("img").attr("data-state");
+        console.log('animate topic');
+        console.log(this);
+        var state = $(this).attr("data-state");
         if (state === "still") {
-            $(this).find("img").attr("src", $(this).find("img").attr("data-animate"));
-            $(this).find("img").attr("data-state", "animate");
-        } else {
-            $(this).find("img").attr("src", $(this).find("img").attr("data-still"));
-            $(this).find("img").attr("data-state", "still");
-        }
+                $(this).attr('src', $(this).attr('data-animate'));
+                $(this).attr('data-state', 'animate');
+            } else {
+                $(this).attr('src', $(this).attr('data-still'));
+                $(this).attr('data-state', 'still');
+            }
+
+        // var state = $(this).find("img").attr("data-state");
+        // if (state === "still") {
+        //     $(this).find("img").attr("src", $(this).find("img").attr("data-animate"));
+        //     $(this).find("img").attr("data-state", "animate");
+        // } else {
+        //     $(this).find("img").attr("src", $(this).find("img").attr("data-still"));
+        //     $(this).find("img").attr("data-state", "still");
+        // }
     }
 
     // $(document).ready(function () {
@@ -86,11 +87,11 @@ $("document").ready(function () {
     // });
 
     $(document).on("click", ".topic_Button", getTopicImages);
-    $(document).on("click", ".topicImgHolder", animateTopic);
+    // $(document).on("click", ".topicImgHolder", animateTopic);
     // $(".topicImgHolder").click(function(e){
     //     console.log(e);
     // });
-    // $(document).on("click", ".topicImage", animateTopic);
+    $(document).on("click", ".topic_Image", animateTopic);
 
 
 
