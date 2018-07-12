@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>neighborly</title>
+    <!-- viewport tag for bootstrap media queries -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link to Boostrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <!-- link to css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- one google font - simplicity!  -->
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+    <!-- awesome fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
+    <!-- firebase before other scripts I think -->
+    <link rel="shortcut icon" href="assets/images/neighborly-favicon.png" />
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        #image {
+            z-index: -2;
+            height: 420px;
+            margin:5px;
+            background: url('assets/images/neighborly1.jpeg') center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            /* border-bottom: 4px solid #000; */
+        
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="header">
+        <div class="row">
+            <div class="col-4" id="logo">neighborly</div>
+            <div class="col-7">
+                <nav class="nav">
+                    <a class="nav-link" id="map-link" href="map.html">Map
+                        <span class="icons">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </a>
+                    <a class="nav-link" id="login-link" href="#">Login
+                        <span class="icons">
+                            <i class="fas fa-sign-in-alt"></i>
+                        </span>
+                    </a>
+                </nav>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <section class="col-md-12" id="image"></section>
+        </div>
+    </div>
+
+    <button id="createButton" type="button" class="trigger btn btn-info">CREATE EVENT</button>
+    <div class="modals">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1>EVENT FORM</h1>
+            <form>
+                <div class="form-group">
+                    <label for="event-title">Event Title</label>
+                    <input type="text" class="form-control" id="event-title" placeholder="Enter event title..">
+                </div>
+                <div class="form-group">
+                    <label for="event-date">Event Date</label>
+                    <input type="date" class="form-control" id="event-date" placeholder="Enter event date..">
+                </div>
+                <div class="form-group">
+                    <label for="street-address">Time</label>
+                    <input type="time" class="form-control" id="event-time" placeholder="Enter Time..">
+                </div>
+                <div class="form-group">
+                    <label for="location">Location (include city)</label>
+                    <input type="text" class="form-control" id="event-address" placeholder="Address or landmark..">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" id="event-description" placeholder="What's happening?">
+                </div>
+ 
+
+                <button type="submit" class="btn btn-primary" id="event-form-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="main-container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="upcoming">upcoming events in your area today:</p>
+                <div class="container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Event</th>
+                                <th scope="col">Where</th>
+                                <th scope="col">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <span id="team1">&copy; 2018 Team 1: Stephen Wood, Kenneth Bitzer, Abdullahi Abdirashid, Tunji Akanbi</span>
+    </footer>
+
+
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
+    <!-- Link to Moment.js-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</body>
+
+</html>
