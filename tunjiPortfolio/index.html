@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+
+    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Economica:700|Quicksand:300" rel="stylesheet">
+    <title>Tunji Akanbi Portfolio</title>
+    <style>
+        #formsection {
+            margin-top: 40px;
+            margin-bottom: 163px;
+        }
+
+        #myJumbotron {
+            background-image: url('assets/img/img_background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #fff;
+            margin-bottom: 0;
+        }
+        h2 {
+            margin-left: 10px; 
+            font-family: 'Economica', sans-serif;
+        
+        }
+        /* font-family: 'Economica', sans-serif;
+        font-family: 'Quicksand', sans-serif;
+        font-family: 'Anton', sans-serif; */
+       /* #about {
+            background-color: #7EFFFE;
+              padding-left: 15px;
+            padding-right: 15px;  
+        }*/
+        .lead {
+            text-align: right;
+        }
+      
+    </style>
+    <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script type="text/javascript">
+        function MM_swapImgRestore() { //v3.0
+            var i, x, a = document.MM_sr;
+            for (i = 0; a && i < a.length && (x = a[i]) && x.oSrc; i++) x.src = x.oSrc;
+        }
+
+        function MM_preloadImages() { //v3.0
+            var d = document;
+            if (d.images) {
+                if (!d.MM_p) d.MM_p = new Array();
+                var i, j = d.MM_p.length,
+                    a = MM_preloadImages.arguments;
+                for (i = 0; i < a.length; i++)
+                    if (a[i].indexOf("#") != 0) {
+                        d.MM_p[j] = new Image;
+                        d.MM_p[j++].src = a[i];
+                    }
+            }
+        }
+
+        function MM_findObj(n, d) { //v4.01
+            var p, i, x;
+            if (!d) d = document;
+            if ((p = n.indexOf("?")) > 0 && parent.frames.length) {
+                d = parent.frames[n.substring(p + 1)].document;
+                n = n.substring(0, p);
+            }
+            if (!(x = d[n]) && d.all) x = d.all[n];
+            for (i = 0; !x && i < d.forms.length; i++) x = d.forms[i][n];
+            for (i = 0; !x && d.layers && i < d.layers.length; i++) x = MM_findObj(n, d.layers[i].document);
+            if (!x && d.getElementById) x = d.getElementById(n);
+            return x;
+        }
+
+        function MM_swapImage() { //v3.0
+            var i, j = 0,
+                x, a = MM_swapImage.arguments;
+            document.MM_sr = new Array;
+            for (i = 0; i < (a.length - 2); i += 3)
+                if ((x = MM_findObj(a[i])) != null) {
+                    document.MM_sr[j++] = x;
+                    if (!x.oSrc) x.oSrc = x.src;
+                    x.src = a[i + 2];
+                }
+        }
+    </script>
+</head>
+
+<body onLoad="MM_preloadImages('assets/images/Circle Grey/Github.png','assets/images/Circle Grey/Linkedin.png')">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <nav class="navbar navbar-light navbar-expand-sm" style="background-color: #fff;">
+        <div class="container">
+            <div class="navbar-brand">Tunji Akanbi</div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="myTogglerNav"
+                aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="myTogglerNav">
+                <div class="navbar-nav ml-auto">
+                    <!-- <a class="nav-item nav-link active" href="index.html">About</a>
+                    <a class="nav-item nav-link" href="portfolio.html">Portfolio</a>
+                    <a class="nav-item nav-link" href="contact.html">Contact</a> -->
+                    <a class="nav-item nav-link active" href="#about"style="">About</a>
+                    <a class="nav-item nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-item nav-link" href="#formsection">Contact</a>
+                    <a class="nav-item nav-link" href="Tunji Akanbi Resume_2017.pdf" download>Resume</a>
+                </div>
+                <!--navbar -->
+            </div>
+            <!--collapse -->
+        </div>
+    </nav>
+
+
+    <!-- jumbotron begins -->
+    <div class="jumbotron jumbotron-fluid" id="myJumbotron">
+        <div class="container">
+            <h1 class="display-4">Tunji Akanbi</h1>
+            <h1 class="lead">Front End Developer/UI/UX Designer</h1>
+        </div>
+    </div>
+    <!-- jumbotron ends -->
+
+   
+    <div class="container" id="about">
+        <!-- <div class="row"> -->
+            <h2>About Me:</h2><img src="assets/images/tunji.jpeg" alt="Tunji Image" class="img-fluid mx-auto float-left" style="padding: 0 10px 0 10px;" id="tunjiImg">
+            <p id="bio">
+                <!-- <img src="assets/images/tunji.jpeg" alt="Tunji Image" id="tunjiImg"> -->
+                 My primary interests currently are in academia where I can use my knowledge of information technology, web
+                development & design, computer graphics, video editing, animation, illustration and architectural drafting
+                skills along with my strong sense of professionalism and interpersonal skills, while contributing to the
+                value, growth and development of my students. I am an illustrator, 3D artist, video editor and web designer
+                with a strong background in the arts, especially traditional and digital illustration and architectural design.
+                My versatile background allows me to bring a broader perspective to my job responsibilities. I enjoy being
+                creative and have been so all my life. I am a self-motivated and hard working individual with great interpersonal
+                and communication skills. I am always eager to capitalize on my skills and experiences. Specialties: Web
+                Design and Vector Animation (HTML5 & CSS3, JavaScript, AJAX, PHP, JQUERY, SQL, C#/ASP.NET, Dreamweaver, Flash).
+                Graphic arts (Photoshop, Illustrator), 3D Animation (Autodesk Maya, Groboto), Video and Audio Editing (Final
+                Cut Pro, Adobe Premiere Pro, After Effects, Reason, Ableton Live 8), Knowledgeable about digital photography,
+                Windows and Mac operating systems and work environments, Virtual PC for alternating between different Operating
+                Systems (hardware upgrades, software installs, etc.).</p>
+        <!-- </div> -->
+    </div>
+
+    <!-- <div id="intro">
+        <div class="content">
+
+        </div>
+    </div> -->
+    <div class="container" id="portfolio">
+    <div id="main" class="main-container">
+        <h2>Portfolio:</h2>
+        <div id="project01" class="project">
+                <a href="https://tunjiakanbi.github.io/RPS-Multiplayer/" target="_blank"><img src="assets/img/img_project01-icon.svg"/></a>
+            <h2>Rock Paper Scissors Game</h2>
+            <p class="info"></p>
+        </div>
+
+        <div id="project02" class="project">
+            <a href="https://tunjiakanbi.github.io/giftastic/" target="_blank"><img src="assets/img/img_project02-icon.svg" /></a>
+            <h2>giftastic Demo Game</h2>
+            <p class="info"></p>
+        </div>
+
+        <div id="project03" class="project">
+            <a href="https://tunjiakanbi.github.io/crystalCollector-game/" target="_blank">
+            <img src="assets/img/img_project03-icon.svg" /></a>
+            <h2>Crystal Collector</h2>
+            <p class="info"></p>
+        </div>
+
+        <div id="project04" class="project">
+                <a href="https://tunjiakanbi.github.io/Project1/" target="_blank">
+                <img src="assets/img/img_project01-icon.svg" /></a>
+                <h2>Project 1</h2>
+                <p class="info"></p>
+            </div>
+
+    </div>
+</div>
+    <!-- #main-container -->
+
+    <!-- form begins -->
+    <div class="container" id="formsection">
+        <!-- <div class="row"> -->
+        <h2>Contact Me:</h2>
+        <form>
+            <div class="form-group row">
+                <label for="myInputName" class="col-sm-4 col-form-label">Your Name:</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="myInputName" placeholder="Enter your name">
+                </div>
+
+            </div>
+            <div class="form-group row">
+                <label for="myInputEmail1" class="col-sm-4 col-form-label">Email Address:</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="myInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="myFormControlTextarea">Message:</label>
+                <textarea class="form-control" id="myFormControlTextarea" rows="9"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!-- </div> -->
+    </div>
+
+    <!-- form ends -->
+    <footer class="fixed-bottom">
+        <span>Tunji Akanbi &copy; 2018</span>
+        <span>
+            <a href="https://github.com/tunjiakanbi" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('gitHub','','assets/images/Circle Grey/Github.png',1)">
+                <img src="assets/images/Circle Color/Github.png" alt="Git Hub Logo" width="48" height="48" id="gitHub">
+            </a>
+        </span>
+        <span>
+            <a href="https://www.linkedin.com/in/tunjiakanbi/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('linkedIn','','assets/images/Circle Grey/Linkedin.png',1)">
+                <img src="assets/images/Circle Color/Linkedin.png" alt="LinkedIn logo" width="48" height="48" id="linkedIn">
+            </a>
+        </span>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
