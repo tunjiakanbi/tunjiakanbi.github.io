@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Crystal Collector Game
+    </title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Ultra" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            /* background-color: #2196F3; */
+            padding: 10px;
+        }
+
+        .grid-item {
+            /* background-color: rgba(255, 255, 255, 0.8); */
+             border: 5px solid rgba(255, 0, 0, 0.8); 
+            padding: 20px;
+            font-size: 30px;
+            text-align: center;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="test">
+        <h1>Crystal Collector Game</h1>
+        <p class="instructions">
+            You will be given a random number at the strat of the game.
+        </p>
+        <p class="instructions">
+            There are four crystals Below. By clicking on a crystal you will add a specific amount of points to your total score.
+        </p>
+        <p class="instructions">
+            You win the game by matching your total score to the random number, you lose the game if your total score goes above the
+            random number.
+        </p>
+        <p class="instructions">
+            The value of each crystal is hidden from you until you click on it.
+        </p>
+        <p class="instructions">
+            Each time when the game starts, the game will change the values of each crystal.
+        </p>
+    </div>
+    <div id="test">
+        <img src="assets/images/crystalRed.jpg" alt="crystalRed" class="crystal" id="crystalRedNum">
+        <img src="assets/images/crystalBlue.jpg" alt="crystalBlue" class="crystal" id="crystalBlueNum">
+        <img src="assets/images/crystalGreen.jpg" alt="crystalGreen" class="crystal" id="crystalGreenNum">
+        <img src="assets/images/crystalPurple.jpg" alt="crystalPurple" class="crystal" id="crystalPurpleNum">
+    </div>
+    <div class="test">
+        <p id="random"></p>
+        <p id="winnings"></p>
+        <p id="losses"></p>
+        <p id="message">Your total score is: <span></span></p>
+        <p id="results"></p>
+    </div>
+    <!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_item -->
+    <!-- <div class="grid-container">
+        <div class="grid-item">1A</div>
+
+    </div>
+    <div class="grid-container">
+        <div class="grid-item" style="background-color: red;">1B</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </div> -->
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>
