@@ -20,9 +20,7 @@ if (liriToDo === "my-Tweets") {
     liriMovie();
 } else if (liriToDo === "do-what-it-says") {
 
- } //else {
-//      outputNum = "Not a recognized command";
-// }
+}
 
 function liriTwitter() {
     var params = {
@@ -32,13 +30,7 @@ function liriTwitter() {
 
         if (!error) {
             for (var i = 0; i < tweets.length; i++) {
-                // console.log(tweets);
-                // console.log(response);
-                // console.log(tweets[i].text);
-                //   console.log(JSON.stringify(tweets, null, 2));
-                //   console.log(JSON.stringify(tweets[i], null, 2));
                 console.log("Tunji Akanbi Tweets: " + tweets[i].text + "Created at: " + tweets[i].created_at);
-                //   console.log(tweets.length);
             }
         }
     });
@@ -92,16 +84,16 @@ function liriMovie() {
         if (error) {
             console.log("Error occurred: " + error);
             return;
-            } else if
-            
-             (!error && response.statusCode === 200) {
-                console.log("Movie Title: " + JSON.parse(body).Title);
-                console.log("Year: " + JSON.parse(body).Year);
-                console.log("Rating: " + JSON.parse(body).Ratings[0].Source + " / " + JSON.parse(body).Ratings[0].Value);
-                console.log("Country: " + JSON.parse(body).Country);
-                console.log("Language: " + JSON.parse(body).Language);
-                console.log("Plot: " + JSON.parse(body).Plot);
-                console.log("Actors: " + JSON.parse(body).Actors);   
+        } else if
+
+        (!error && response.statusCode === 200) {
+            console.log("Movie Title: " + JSON.parse(body).Title);
+            console.log("Year: " + JSON.parse(body).Year);
+            console.log("Rating: " + JSON.parse(body).Ratings[0].Source + " / " + JSON.parse(body).Ratings[0].Value);
+            console.log("Country: " + JSON.parse(body).Country);
+            console.log("Language: " + JSON.parse(body).Language);
+            console.log("Plot: " + JSON.parse(body).Plot);
+            console.log("Actors: " + JSON.parse(body).Actors);
         }
     });
 }
