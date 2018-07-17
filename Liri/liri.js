@@ -10,6 +10,7 @@ var client = new Twitter(keys.twitter);
 // console.log(spotify);
 // console.log(client);
 var request = require("request");
+var fs = require("fs");
 var liriToDo = process.argv[2];
 
 if (liriToDo === "my-Tweets") {
@@ -19,7 +20,7 @@ if (liriToDo === "my-Tweets") {
 } else if (liriToDo === "movie-this") {
     liriMovie();
 } else if (liriToDo === "do-what-it-says") {
-
+    liriDoWhatItSays();
 }
 
 function liriTwitter() {
@@ -37,6 +38,7 @@ function liriTwitter() {
 };
 
 function liriSpotify() {
+    // var song = process.argv.splice[3].join("+");
     var nodeArgs = process.argv;
     var song = "";
 
@@ -97,3 +99,51 @@ function liriMovie() {
         }
     });
 }
+
+
+function liriDoWhatItSays(){
+    fs.readFile("random.txt", "utf8", function(error, data) {
+
+   
+    if (error) {
+      return console.log(error);
+    }
+
+    console.log(data);
+
+    var dataArr = data.split(",");
+  
+    console.log(dataArr);
+
+    var nodeArgs = process.argv;
+    var song = "";
+
+    if (nodeArgs.length === 3) {
+        song = "Bad and Boujee";
+        // song = "The Sign";
+    }
+
+    for (i = 3; i < nodeArgs.length; i++) {
+        song = dataArr[i];
+    }
+    spotify.search({
+        type: 'track',
+        query: song
+    }, function (error, data) {
+
+        if (error) {
+            console.log("Error occurred: " + error);
+            return;
+        } else {
+            console.log("Artist Name: " + data["tracks"].items[0].artists[0].name);
+            console.log("Song Title: " + data["tracks"].items[0].name);
+            console.log("Preview Link: " + data["tracks"].items[0].preview_url);
+            console.log("Album Name: " + data["tracks"].items[0].album.name);
+        }
+    });
+  
+  });
+
+}
+
+  
