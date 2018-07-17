@@ -71,16 +71,20 @@ function liriMovie() {
     var nodeArgs = process.argv;
     var movie = "";
 
+    console.log(nodeArgs.length);
 
-    for (var i = 3; i < nodeArgs.length; i++) {
-        movie = movie + " " + nodeArgs[i];
-    }
+    if (nodeArgs.length > 3) {
+        console.log(process.argv[3])
 
-    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
-    //console.log(queryURL)
-    if (nodeArgs.length === 3) {
+        movie = process.argv[3]
+    } else {
         movie = "Mr. Nobody.";
     }
+
+    console.log(movie);
+    var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+    //console.log(queryURL)
+
 
     request(queryURL, function (error, response, body) {
         if (error) {
@@ -101,49 +105,36 @@ function liriMovie() {
 }
 
 
-function liriDoWhatItSays(){
-    fs.readFile("random.txt", "utf8", function(error, data) {
+function liriDoWhatItSays() {
+    fs.readFile("random.txt", "utf8", function (error, data) {
 
-   
-    if (error) {
-      return console.log(error);
-    }
-
-    console.log(data);
-
-    var dataArr = data.split(",");
-  
-    console.log(dataArr);
-
-    var nodeArgs = process.argv;
-    var song = "";
-
-    if (nodeArgs.length === 3) {
-        song = "Bad and Boujee";
-        // song = "The Sign";
-    }
-
-    for (i = 3; i < nodeArgs.length; i++) {
-        song = dataArr[i];
-    }
-    spotify.search({
-        type: 'track',
-        query: song
-    }, function (error, data) {
 
         if (error) {
-            console.log("Error occurred: " + error);
-            return;
-        } else {
-            console.log("Artist Name: " + data["tracks"].items[0].artists[0].name);
-            console.log("Song Title: " + data["tracks"].items[0].name);
-            console.log("Preview Link: " + data["tracks"].items[0].preview_url);
-            console.log("Album Name: " + data["tracks"].items[0].album.name);
+            return console.log(error);
         }
+
+        console.log(data);
+
+        var dataArr = data.split(",");
+
+        console.log(dataArr);
+        var song = dataArr[1]
+        spotify.search({
+            type: 'track',
+            query: song
+        }, function (error, data) {
+
+            if (error) {
+                console.log("Error occurred: " + error);
+                return;
+            } else {
+                console.log("Artist Name: " + data["tracks"].items[0].artists[0].name);
+                console.log("Song Title: " + data["tracks"].items[0].name);
+                console.log("Preview Link: " + data["tracks"].items[0].preview_url);
+                console.log("Album Name: " + data["tracks"].items[0].album.name);
+            }
+        });
+
     });
-  
-  });
 
 }
-
-  
