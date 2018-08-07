@@ -269,6 +269,12 @@ $(document).ready(function () {
 
                 database.ref().child("/outcome/").set("Rock wins!");
                 database.ref().child("/players/player1/loss").set(player1.loss + 1);
+            console.log(player1.win);
+            console.log(player1.loss);
+            console.log(player2.win);
+            console.log(player2.win);
+            console.log(player1.tie);
+            
                 database.ref().child("/players/player2/win").set(player2.win + 1);
             } else if (player2.choice === "Paper") {
 
